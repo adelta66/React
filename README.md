@@ -1,5 +1,5 @@
 
-## 'npm install'
+### `npm install`
 aby pobrać ważne rzeczy
 
 ### `npm start`
