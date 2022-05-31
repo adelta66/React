@@ -1,0 +1,48 @@
+.mainview{
+    display: flex;
+    background-color: #FFF5E6;
+    width: 70%;
+    height: 85%;
+    border-radius: 10px;
+    padding: 10px;
+}
+.groups{
+    background-color: lightgrey;
+    flex: 1;
+    border-radius: 10px;
+}
+.tasks{
+    flex: 3;
+    background-color: lightgrey;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+ul {
+    list-style-type: none;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+li{
+    display: flex;
+    margin-bottom: 10px;
+    width: 90%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.group-btn{
+    display: flex;
+    background-color: #FFF5E6;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border:0;
+}
+button:focus{
+    border:1px solid red;
+}
