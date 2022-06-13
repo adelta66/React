@@ -2,8 +2,8 @@ import "./app.css";
 import Login from "./components/login/Login";
 import React from "react";
 import MainView from "./components/MainView/MainView";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Nav from "./components/Nav/Nav";
+import {AuthProvider} from "./contexts/AuthContext";
+import Nav from "./components/Nav/Nav"
 /* 
   green:"#82D9A0",
   red:"#CD5D67",
@@ -14,16 +14,13 @@ import Nav from "./components/Nav/Nav";
 
 function App() {
   return (
-    <div className="app-div">
-   
-      <BrowserRouter>
-      <Nav />
-        <Routes>
-          <Route path="/" element={<Login />}></Route>
-          <Route path="/zadania" element={<MainView />} ></Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <AuthProvider>
+      <div className="app-div">
+          <Nav></Nav>
+          <Login></Login>
+          {/* <MainView></MainView> */}
+      </div>
+    </AuthProvider>
   );
 }
 
