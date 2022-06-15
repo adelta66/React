@@ -1,16 +1,21 @@
 import React from "react";
-import { firebaseDb } from 'firebase/firebaseDb'
+import { useDB } from "../../contexts/DBContext";
 
-const uid = props.uid
-
-let userData = firebaseDb.ref('users/'+uid).once('value',snapshot=>{
-    console.log(snapshot.val())
-})
 
 export default function StudentView() {
+
+  const {user}  = useDB()
+
+  const logUserInfo = () => {
+    
+    console.log(user)
+  }
+
+
+
   return (
     <div>
-      
+      <button onClick={logUserInfo}>log user</button>
     </div>
   );
 }

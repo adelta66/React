@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react"
 
-import auth from '../firebase'
+import {authF} from '../firebase'
 import {signInWithEmailAndPassword, getAuth} from "firebase/auth"
 
 
@@ -12,32 +12,26 @@ export function useAuth() {
 
 export function AuthProvider({children}) {
 
-    const auth = getAuth()
-    const [currentUser, setCurrentUser] = useState()
+    const auth = authF
+    const [currentUser, setCurrentUser] = useState(undefined)
 
-    // getAuth(email, password)
-    //     .createUser({
-    //         email: '',
-    //         password: 'secretPassword',
-    //     })
-    //     .then((userRecord) => {
-    //         // See the UserRecord reference doc for the contents of userRecord.
-    //         console.log('Successfully created new user:', userRecord.uid)
-    //     })
-    //     .catch((error) => {
-    //         console.log('Error creating new user:', error)
-    //     })
 
     function login(email, password){
         return signInWithEmailAndPassword(auth, email, password)
     }
+    
+    function getUser(){
+        return currentUser
+    }
+
     
     
 
 
     const value = {
         currentUser,
-        login
+        setCurrentUser,
+        login,
     }
 
     return (
