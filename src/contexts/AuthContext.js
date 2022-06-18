@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react"
 
 import {authF} from '../firebase'
-import {signInWithEmailAndPassword, getAuth} from "firebase/auth"
+import {signInWithEmailAndPassword} from "firebase/auth"
 
 
 const AuthContext = React.createContext()
@@ -20,9 +20,6 @@ export function AuthProvider({children}) {
         return signInWithEmailAndPassword(auth, email, password)
     }
     
-    function getUser(){
-        return currentUser
-    }
 
     
     

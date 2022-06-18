@@ -5,8 +5,6 @@ import { useDB } from "../../contexts/DBContext"
 import { useNavigate } from "react-router-dom"
 
 
-
-
 export default function Login() {
 
   const emailRef = useRef()
@@ -57,6 +55,7 @@ export default function Login() {
         <input ref={emailRef} type={"text"} className="pole" placeholder="Login" required></input> <br />
         <input ref={passwordRef} type={"password"} className="pole" placeholder="Hasło" required></input> <br />
         <button type="submit" className="btn" disabled={loading} onClick={handleSubmit}>Zaloguj się</button>
+        {error}
       </form>
 
     </div>
