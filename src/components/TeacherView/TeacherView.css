@@ -1,4 +1,4 @@
-.mainview{
+.mainview {
     display: flex;
     background-color: #FFF5E6;
     width: 70%;
@@ -6,17 +6,20 @@
     border-radius: 10px;
     padding: 10px;
 }
-.groups{
+
+.groups {
     background-color: lightgrey;
     flex: 1;
     border-radius: 10px;
 }
-.tasks{
+
+.tasks {
     flex: 3;
     background-color: lightgrey;
     margin-left: 10px;
     border-radius: 10px;
 }
+
 ul {
     list-style-type: none;
     padding: 0%;
@@ -25,7 +28,8 @@ ul {
     justify-content: center;
     align-items: center;
 }
-li{
+
+li {
     display: flex;
     margin-bottom: 10px;
     width: 90%;
@@ -33,7 +37,8 @@ li{
     justify-content: center;
     align-items: center;
 }
-.group-btn{
+
+.group-btn {
     display: flex;
     background-color: #FFF5E6;
     border-radius: 6px;
@@ -41,8 +46,204 @@ li{
     height: 100%;
     justify-content: center;
     align-items: center;
-    border:0;
+    border: 0;
 }
-button:focus{
-    border:1px solid red;
+
+button:focus {
+    border: 1px solid red;
+}
+
+.groupname {
+    justify-content: center;
+    display: flex;
+    background-color: #FFF5E6;
+    flex: 1;
+    border: 0;
+    border-radius: 6px;
+    margin-left: 10px;
+    margin-top: 7px;
+    width: 98%;
+    height: 35px;
+    border-radius: 3px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.addassingment {
+    justify-content: center;
+    display: flex;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(27, 201, 143);
+    flex: 1;
+    border: 0;
+    border-radius: 6px;
+    margin-left: 10px;
+    margin-top: 7px;
+    width: 98%;
+    height: 35px;
+    border-radius: 3px;
+    align-items: center;
+}
+
+.addAssingmentPop {
+    background-color: #FFF5E6;
+    height: 268px;
+    width: 500px;
+    border-radius: 3px;
+    position: absolute;
+    border: 1px solid black;
+    left: center;
+    top: center;
+    z-index: 2;
+}
+
+.addassingmentPopName {
+    border: 1px solid black;
+    border-radius: 3px;
+    height: 40px;
+    width: 92%;
+    margin-left: 3%;
+    margin-top: 3%;
+    font-size: 20px;
+}
+
+.addassingmentPopDesc {
+    border: 1px solid black;
+    border-radius: 3px;
+    height: 120px;
+    width: 92%;
+    margin-left: 3%;
+    margin-top: 3%;
+    font-size: 20px;
+    padding-top: 0px;
+    resize: none;
+}
+
+.addassingmentPopBtn {
+    border-radius: 3px;
+    position: relative;
+    color: white;
+    font-size: 20px;
+    height: 50px;
+    width: 200px;
+    background-color: rgb(27, 201, 143);
+    border-color: rgb(27, 201, 143);
+    left: 56%;
+}
+
+.addassingmentPopDate {
+    border: 1px solid black;
+    font-size: 20px;
+    height: 50px;
+    width: 200px;
+    right: 56.5%;
+    display: flex;
+    top: 75.5%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    position: absolute;
+}
+
+#assingments {
+    width: 100%;
+    height: 85%;
+    overflow: auto;
+    display: block;
+    float: left;
+}
+
+.oneAssingnment {
+
+    margin-left: 10px;
+    margin-top: 7px;
+    width: 98%;
+    height: 170px;
+    border-radius: 3px;
+    text-align: center;
+    position: relative;
+    flex: 1;
+}
+
+.one {
+    background-color: #FFF5E6;
+    height: auto;
+    width: 98%;
+    position:relative;
+}
+
+.assingnmentName {
+    display: flex;
+    width: 100%;
+    height: 45px;
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.assingnmentDesc {
+    width: 90%;
+    height: 50%;
+    top: -5%;
+    left: 4%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: auto;
+}
+
+.showReplies {
+    margin: 0 auto;
+    border: 1px solid black;
+    color: rgb(27, 201, 143);
+    height: 25px;
+    width: 30%;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -5%;
+    z-index: 101;
+}
+
+#end_date {
+    border: 1px solid black;
+    font-size: 20px;
+    height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    position: relative;
+}
+
+.assingnmentEnd_Date {
+    height: 10%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    left: 40%;
+    top: -5%;
+}
+
+.allReplies {
+    position: relative;
+    border: 1px solid black;
+    top: -2%;
+    width: 100%;
+    height: 200px;
+    border-radius: 3px;
+    background-color: #FFF5E6;
+    overflow: auto;
+    float: left;
+    z-index:101;
 }

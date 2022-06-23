@@ -33,7 +33,6 @@ export function DBProvider({ children }) {
         return new Promise((resolve, reject) => {
             const groupref = ref(db, 'groups/' + groupID)
             get(groupref).then(snapshot => {
-                console.log(snapshot)
                 resolve(snapshot.val())
             })
         })
