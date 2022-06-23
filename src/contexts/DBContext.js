@@ -52,7 +52,8 @@ export function DBProvider({ children }) {
         return new Promise(async (resolve, reject) => {
             const userGroups = await getUserGroups(userID)
             const tasksToBeReturned = []
-            for(const group in userGroups){
+            for(let group in userGroups){
+                group = userGroups[group]
                 const groupTasks = ref(db, 'groups/' + group + '/tasks')
                 const snapshot = await get(groupTasks)
                 const tasks = snapshot.val()
@@ -146,6 +147,8 @@ export function DBProvider({ children }) {
         set(feedbackref, feedback)
     }
 
+
+    
 
 
 

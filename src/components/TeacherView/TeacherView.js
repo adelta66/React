@@ -6,7 +6,6 @@ export default function TeacherView() {
     return (
       <div className="mainview">
 
-
       </div>  
     );
 }
